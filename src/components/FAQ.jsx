@@ -4,7 +4,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '../ui/accordion';
+} from './ui/accordion';
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(0);
