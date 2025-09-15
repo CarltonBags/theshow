@@ -5,11 +5,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 items-center">
           {/* Logo/Brand */}
           <div className="text-center md:text-left">
-            <h3 className="text-4xl font-fredoka font-bold text-secondary text-outline mb-2">
+            <h3 className="text-4xl font-fredoka font-bold text-secondary mb-2">
               DEGENZ
             </h3>
             <p className="font-nunito text-white/80">
-              The crypto cartoon series that gets it.
+              The crypto cartoon from motherfuckers for degens.
             </p>
           </div>
 

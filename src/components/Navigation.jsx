@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import degenzLogo from '../assets/degenz-logo.png';
+import navIcon from '../assets/Navicon.png';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,15 +23,15 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-secondary border-b-4 border-black">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-primary border-b-4 border-black">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src={degenzLogo} 
+              src={navIcon} 
               alt="DEGENZ" 
-              className="h-12 cursor-pointer hover:scale-105 transition-transform duration-300"
+              className="h-16 cursor-pointer hover:scale-105 transition-transform duration-300"
               onClick={() => scrollToSection('#home')}
             />
           </div>
@@ -42,7 +42,7 @@ const Navigation = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="font-fredoka font-bold text-primary hover:text-secondary transition-colors duration-300 text-lg hover:scale-105 transform"
+                className="font-fredoka font-bold text-white hover:text-secondary transition-colors duration-300 text-lg hover:scale-105 transform"
               >
                 {item.name}
               </button>
@@ -78,7 +78,7 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden bg-background border-t-4 border-black py-4">
+          <div className="md:hidden bg-primary border-t-4 border-black py-4">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <button
@@ -94,7 +94,7 @@ const Navigation = () => {
                   window.open('https://twitter.com/DegenzTheShow', '_blank');
                   setIsOpen(false);
                 }}
-                className="cartoon-button bg-secondary text-black mx-4 flex items-center justify-center w-12 h-12 p-0"
+                className="cartoon-button bg-secondary text-black mx-4 flex items-center justify-center w-10 h-10 p-0"
                 aria-label="X (Twitter)"
               >
                 <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">

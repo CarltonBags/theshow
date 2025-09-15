@@ -41,7 +41,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-32 bg-secondary">
+    <section id="faq" className="py-24 bg-secondary">
 
       <div className="container mx-auto px-4">
         {/* Section Header */}

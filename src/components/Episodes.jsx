@@ -43,7 +43,7 @@ const Episodes = () => {
     <section id="episodes" className="relative py-32 bg-secondary">
       <div className="container mx-auto px-4">
         <div>
-          <div className="text-center text-8xl md:text-9xl lg:text-huge xl:text-giant font-fredoka font-black text-white mb-8 ">
+          <div className="text-center text-8xl md:text-9xl lg:text-huge xl:text-giant font-fredoka font-black text-primary mb-8 text-outline">
             SEASON ONE
           </div>
 
