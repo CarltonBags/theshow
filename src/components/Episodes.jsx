@@ -19,7 +19,7 @@ const Episodes = () => {
       description: "The boys make a beginner mistake in their financial planning: Talking about a token launch unencrypted.",
       thumbnail: "https://img.youtube.com/vi/jrGD6Wgmdgw/maxresdefault.jpg",
       youtubeId: "jrGD6Wgmdgw",
-      duration: "2:33"
+      duration: "2:49"
     },
     {
       id: 3,
