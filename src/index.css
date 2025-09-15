@@ -144,6 +144,10 @@ All colors MUST be HSL.
     text-shadow: 2px 2px 0px hsl(var(--cartoon-outline));
   }
 
+  .text-outline-white {
+    text-shadow: 2px 2px 0px hsl(0 0% 100%);
+  }
+
   .bounce-in {
     animation: bounceIn 0.6s ease-out;
   }

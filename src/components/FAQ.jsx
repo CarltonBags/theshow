@@ -63,7 +63,7 @@ const FAQ = () => {
                 className="cartoon-card bg-secondary border-4 border-black"
               >
                 <AccordionTrigger className="text-left px-6 py-4 hover:no-underline">
-                  <h3 className="text-2xl font-fredoka font-bold text-primary pr-4">
+                  <h3 className="text-2xl font-fredoka font-bold text-primary text-outline-white pr-4">
                     {faq.question}
                   </h3>
                 </AccordionTrigger>
