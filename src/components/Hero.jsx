@@ -22,7 +22,7 @@ const Hero = () => {
 
         {/* Tagline */}
         <div className={`text-center mb-12 transform transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <h1 className="text-6xl md:text-8xl lg:text-8xl font-fredoka font-black text-primary text-outline mb-6">
+          <h1 className="text-6xl md:text-7xl lg:text-7xl font-fredoka font-black text-primary text-outline mb-6">
             THE CRYPTO MINI-CARTOON SERIES
           </h1>
           <p className="text-2xl md:text-3xl lg:text-4xl font-nunito font-bold text-primary mb-6">
@@ -34,10 +34,27 @@ const Hero = () => {
           </p>
         </div>
 
+        {/* Trailer */}
+        <div className={`w-full max-w-4xl mx-auto mb-12 transform transition-all duration-1000 delay-600 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <h2 className="text-4xl md:text-5xl font-fredoka font-black text-primary text-center text-outline mb-6">
+            TRAILER
+          </h2>
+          <div className="relative rounded-xl overflow-hidden border-8 border-black shadow-[8px_8px_0_0_rgba(0,0,0,0.2)]">
+            <div className="aspect-video">
+              <iframe
+                src="https://www.youtube.com/embed/z8RMODBZTBc"
+                title="DEGENZ Trailer"
+                className="w-full h-full"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
         {/* CTA Buttons */}
         <div className={`flex flex-col sm:flex-row gap-4 transform transition-all duration-1000 delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <button 
-            className="cartoon-button bg-secondary text-black hover:bg-secondary/90"
+            className="cartoon-button bg-primary text-white hover:bg-primary/90"
             onClick={() => document.getElementById('episodes').scrollIntoView({ behavior: 'smooth' })}
           >
             WATCH EPISODES
