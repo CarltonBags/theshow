@@ -8,15 +8,15 @@ const Episodes = () => {
     {
       id: 1,
       title: "Episode 1 - The Dev",
-      description: "Steve and Lenny meet their first developer. Things don't go as planned when the code starts breaking faster than they can fix it.",
+      description: "Steve and Lenny need an additional Dev. But the applicants are not what they were hoping for.",
       thumbnail: "https://img.youtube.com/vi/idB9tzSEKEk/maxresdefault.jpg",
       youtubeId: "idB9tzSEKEk",
-      duration: "3:42"
+      duration: "2:33"
     },
     {
       id: 2,
       title: "Episode 2 - Monee",
-      description: "The boys encounter their first greedy investor. Watch as corporate greed meets crypto chaos in this hilarious episode.",
+      description: "The boys make a beginner mistake in their financial planning: Talking about a token launch unencrypted.",
       thumbnail: titlecardImage,
       youtubeId: "", // Placeholder
       duration: "x:xx"
@@ -24,7 +24,7 @@ const Episodes = () => {
     {
       id: 3,
       title: "Episode 3 - Leroy",
-      description: "Steve and Lenny meet Leroy, an influencer who promises the moon but delivers... well, you'll have to watch to find out!",
+      description: "Steve and Lenny decide to get some advice from a crypto veteran. Will his advice be helpful?",
       thumbnail: titlecardImage,
       youtubeId: "", // Placeholder
       duration: "x:xx"
@@ -32,7 +32,7 @@ const Episodes = () => {
     {
       id: 4,
       title: "Episode 4 - BTC",
-      description: "Steve and Lenny meet Leroy, an influencer who promises the moon but delivers... well, you'll have to watch to find out!",
+      description: "The guys wanted to attend a crypto conference for networking. But they accidentally bought tickets to a BTC conference instead...",
       thumbnail: titlecardImage,
       youtubeId: "", // Placeholder
       duration: "x:xx"
@@ -103,7 +103,7 @@ const Episodes = () => {
                   </div>
                 ) : (
                   // Odd numbered episodes - Video Left, Text Right
-                  <div className="hidden lg:flex gap-16 items-center bg-primary border-8 border-white rounded-2xl p-8 ">
+                  <div className="hidden lg:flex gap-16 items-center bg-primary border-8 border-white rounded-2xl p-8 shadow-[8px_8px_0_0_rgba(0,0,0,0.2)]">
                     {/* Video on Left */}
                     <div className="w-7/12">
                       <div 

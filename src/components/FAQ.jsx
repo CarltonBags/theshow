@@ -12,11 +12,11 @@ const FAQ = () => {
   const faqs = [
     {
       question: "What is DEGENZ?",
-      answer: "DEGENZ is a hilarious crypto cartoon series in the style of South Park and Family Guy. Follow Steve and Lenny, two crypto degenerates trying to build a launchpad while facing all the chaos of the crypto world - corrupt VCs, greedy influencers, code errors, and more!"
+      answer: "DEGENZ is a non-pc crypto mini-cartoon series. Follow Steve and Lenny, two crypto degens trying to build a launchpad while facing all the chaos of the crypto world - corrupt VCs, disgusting chicks, code errors, and more!"
     },
     {
-      question: "What is it about?",
-      answer: "The show follows Steve and Lenny as they navigate the wild world of cryptocurrency. Each episode tackles real crypto problems with humor - from buggy smart contracts to dealing with sketchy investors and overhyped influencers. It's a satirical take on crypto culture that anyone in the space will relate to."
+      question: "Is there a token?",
+      answer: "Not yet. If the show is well received we will hold a token presale to upgrade the production and expand the show and episode length. The token will then be used for revenue share among investors."
     },
     {
       question: "How long are the episodes?",
@@ -25,10 +25,6 @@ const FAQ = () => {
     {
       question: "When do new episodes come out?",
       answer: "Season One is currently rolling out! Follow @DegenzTheShow on Twitter to get notified when new episodes drop. We're aiming for regular releases throughout the season."
-    },
-    {
-      question: "Who are the main characters?",
-      answer: "Meet Steve (the bearded guy in the hoodie) and Lenny (the one with glasses) - two crypto enthusiasts with big dreams but even bigger problems. They're trying to build the next big crypto launchpad, but everything that can go wrong... does go wrong."
     },
     {
       question: "Is this financial advice?",
