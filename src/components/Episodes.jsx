@@ -9,17 +9,17 @@ const Episodes = () => {
       id: 1,
       title: "Episode 1 - The Dev",
       description: "Steve and Lenny need an additional Dev. But the applicants are not what they were hoping for.",
-      thumbnail: "https://img.youtube.com/vi/idB9tzSEKEk/maxresdefault.jpg",
-      youtubeId: "idB9tzSEKEk",
+      thumbnail: "https://img.youtube.com/vi/-iaRHnEeUkA/maxresdefault.jpg",
+      youtubeId: "-iaRHnEeUkA",
       duration: "2:33"
     },
     {
       id: 2,
       title: "Episode 2 - Monee",
       description: "The boys make a beginner mistake in their financial planning: Talking about a token launch unencrypted.",
-      thumbnail: titlecardImage,
-      youtubeId: "", // Placeholder
-      duration: "x:xx"
+      thumbnail: "https://img.youtube.com/vi/jrGD6Wgmdgw/maxresdefault.jpg",
+      youtubeId: "jrGD6Wgmdgw",
+      duration: "2:33"
     },
     {
       id: 3,
