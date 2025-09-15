@@ -42,7 +42,7 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="border-t-4 border-secondary/30 mt-8 pt-8 text-center">
           <p className="font-nunito text-white/60">
-            © 2024 DEGENZ. All rights reserved. HODL responsibly.
+            © 2025 DEGENZ. All rights reserved. HODL responsibly.
           </p>
         </div>
       </div>

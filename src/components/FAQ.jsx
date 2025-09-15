@@ -41,36 +41,39 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-20 bg-primary">
+    <section id="faq" className="py-32 bg-secondary">
+
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-fredoka font-bold text-secondary text-outline mb-4 bounce-in">
+        <div className="text-center mb-24">
+          <h2 className="text-6xl md:text-7xl font-fredoka font-bold text-primary text-outline mb-6 bounce-in">
             FAQ
           </h2>
-          <p className="text-xl text-secondary/80 font-nunito font-semibold">
+          <p className="text-2xl text-primary font-nunito font-bold">
             Everything you need to know about DEGENZ!
           </p>
         </div>
 
         {/* FAQ Accordion */}
-        <div className="max-w-4xl mx-auto">
-          <Accordion type="single" collapsible className="space-y-6">
+        <div className="max-w-3xl mx-auto">
+          <Accordion type="single" collapsible className="space-y-3">
             {faqs.map((faq, index) => (
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
-                className="cartoon-card bg-secondary border-4 border-black"
+                className="bg-white border-4 border-black rounded-lg overflow-hidden shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-shadow"
               >
-                <AccordionTrigger className="text-left px-6 py-4 hover:no-underline">
-                  <h3 className="text-2xl font-fredoka font-bold text-primary text-outline-white pr-4">
+                <AccordionTrigger className="text-left px-3 py-2 hover:no-underline data-[state=open]:bg-primary/5 transition-colors group">
+                  <h3 className="text-lg font-fredoka font-bold text-primary pr-3 group-hover:translate-x-1 transition-transform">
                     {faq.question}
                   </h3>
                 </AccordionTrigger>
-                <AccordionContent className="px-6 pb-6">
-                  <p className="text-lg font-nunito text-muted-foreground leading-relaxed border-t-4 border-primary/20 pt-4">
-                    {faq.answer}
-                  </p>
+                <AccordionContent className="px-3 pb-3">
+                  <div className="relative border-t border-primary/10">
+                    <p className="text-sm font-nunito text-muted-foreground leading-relaxed pt-2">
+                      {faq.answer}
+                    </p>
+                  </div>
                 </AccordionContent>
               </AccordionItem>
             ))}

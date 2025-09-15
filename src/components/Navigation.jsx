@@ -37,7 +37,7 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-12">
+          <div className="hidden md:flex items-center justify-end flex-1 space-x-24 ml-24">
             {navItems.map((item) => (
               <button
                 key={item.name}
@@ -49,9 +49,12 @@ const Navigation = () => {
             ))}
             <button 
               onClick={() => window.open('https://twitter.com/DegenzTheShow', '_blank')}
-              className="cartoon-button bg-secondary text-black"
+              className="cartoon-button bg-secondary text-black flex items-center justify-center w-12 h-12 p-0"
+              aria-label="X (Twitter)"
             >
-              TWITTER
+              <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
             </button>
           </div>
 
@@ -91,9 +94,12 @@ const Navigation = () => {
                   window.open('https://twitter.com/DegenzTheShow', '_blank');
                   setIsOpen(false);
                 }}
-                className="cartoon-button bg-secondary text-black mx-4"
+                className="cartoon-button bg-secondary text-black mx-4 flex items-center justify-center w-12 h-12 p-0"
+                aria-label="X (Twitter)"
               >
-                TWITTER
+                <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
               </button>
             </div>
           </div>

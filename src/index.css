@@ -2,116 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700;800&display=swap');
 
+/* Base styles */
 @layer base {
-  :root {
-    /* DEGENZ Color Palette */
-    --background: 0 0% 98%;
-    --foreground: 0 0% 5%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 5%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 5%;
-
-    /* Main brand colors from DEGENZ logo */
-    --primary: 206 73% 39%; /* #1a6cad */
-    --primary-foreground: 0 0% 100%;
-    --primary-dark: 206 84% 25%; /* darker blue */
-
-    --secondary: 46 91% 64%; /* #f8ce51 */
-    --secondary-foreground: 0 0% 5%;
-
-    --muted: 210 20% 94%;
-    --muted-foreground: 215 16% 47%;
-
-    --accent: 46 91% 64%; /* yellow accent */
-    --accent-foreground: 0 0% 5%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 0 0% 90%;
-    --input: 0 0% 95%;
-    --ring: 206 73% 39%;
-
-    --radius: 12px;
-
-    /* Custom DEGENZ design tokens */
-    --cartoon-outline: 0 0% 0%; /* black outlines */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--primary)));
-    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)));
-    --shadow-cartoon: 4px 4px 0px hsl(var(--cartoon-outline));
-    --shadow-hover: 6px 6px 0px hsl(var(--cartoon-outline));
-    --transition-bounce: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 0 0% 8%;
-    --foreground: 0 0% 95%;
-
-    --card: 0 0% 12%;
-    --card-foreground: 0 0% 95%;
-
-    --popover: 0 0% 12%;
-    --popover-foreground: 0 0% 95%;
-
-    --primary: 206 73% 49%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 46 91% 54%;
-    --secondary-foreground: 0 0% 5%;
-
-    --muted: 0 0% 15%;
-    --muted-foreground: 215 20% 65%;
-
-    --accent: 46 91% 54%;
-    --accent-foreground: 0 0% 5%;
-
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 206 73% 49%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
+  html {
+    font-family: 'Nunito', sans-serif;
   }
 
   body {
-    @apply bg-background text-foreground font-nunito;
+    @apply bg-secondary text-primary antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -119,61 +20,74 @@ All colors MUST be HSL.
   }
 }
 
+/* Custom components */
 @layer components {
+  /* Text outline styles */
+  .text-outline {
+    position: relative;
+    color: #1a6cad;
+    text-shadow: 
+      -3px -3px 0 white,
+      3px -3px 0 white,
+      -3px 3px 0 white,
+      3px 3px 0 white,
+      -4px -4px 0 white,
+      4px -4px 0 white,
+      -4px 4px 0 white,
+      4px 4px 0 white,
+      6px 6px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  /* Button styles */
   .cartoon-button {
-    @apply bg-primary text-primary-foreground font-fredoka font-bold px-6 py-3 rounded-lg border-4 border-black transition-all duration-200;
-    box-shadow: var(--shadow-cartoon);
+    @apply bg-primary text-white font-fredoka font-bold px-6 py-3 rounded-lg 
+           border-4 border-black transition-all duration-200
+           hover:translate-x-1 hover:translate-y-1;
+    box-shadow: 4px 4px 0 black;
   }
 
   .cartoon-button:hover {
-    @apply translate-x-1 translate-y-1;
-    box-shadow: var(--shadow-hover);
+    box-shadow: 2px 2px 0 black;
   }
 
+  /* Card styles */
   .cartoon-card {
-    @apply bg-card border-4 border-black rounded-lg p-6 transition-all duration-200;
-    box-shadow: var(--shadow-cartoon);
+    @apply bg-white rounded-lg border-4 border-black p-6 transition-all duration-200
+           hover:translate-x-1 hover:translate-y-1;
+    box-shadow: 4px 4px 0 black;
   }
 
   .cartoon-card:hover {
-    @apply translate-x-1 translate-y-1;
-    box-shadow: var(--shadow-hover);
+    box-shadow: 2px 2px 0 black;
   }
 
-  .text-outline {
-    text-shadow: 2px 2px 0px hsl(var(--cartoon-outline));
-  }
-
-  .text-outline-white {
-    text-shadow: 2px 2px 0px hsl(0 0% 100%);
-  }
-
+  /* Animation classes */
   .bounce-in {
-    animation: bounceIn 0.6s ease-out;
+    animation: bounce-in 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
 
-  @keyframes bounceIn {
+  @keyframes bounce-in {
     0% {
-      transform: scale(0.3) rotate(-10deg);
+      transform: scale(0.3);
       opacity: 0;
     }
     50% {
-      transform: scale(1.05) rotate(5deg);
+      transform: scale(1.05);
     }
     70% {
-      transform: scale(0.9) rotate(-2deg);
+      transform: scale(0.9);
     }
     100% {
-      transform: scale(1) rotate(0deg);
+      transform: scale(1);
       opacity: 1;
     }
   }
 
   .slide-up {
-    animation: slideUp 0.8s ease-out;
+    animation: slide-up 0.6s ease-out both;
   }
 
-  @keyframes slideUp {
+  @keyframes slide-up {
     0% {
       transform: translateY(30px);
       opacity: 0;
