@@ -1,4 +1,10 @@
 import { useState } from 'react';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '../ui/accordion';
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(0);
@@ -35,47 +41,40 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section id="faq" className="py-20 bg-primary">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-fredoka font-bold text-primary text-outline mb-4 bounce-in">
+          <h2 className="text-5xl md:text-6xl font-fredoka font-bold text-secondary text-outline mb-4 bounce-in">
             FAQ
           </h2>
-          <p className="text-xl text-muted-foreground font-nunito font-semibold">
+          <p className="text-xl text-secondary/80 font-nunito font-semibold">
             Everything you need to know about DEGENZ!
           </p>
         </div>
 
         {/* FAQ Accordion */}
         <div className="max-w-4xl mx-auto">
-          {faqs.map((faq, index) => (
-            <div 
-              key={index} 
-              className={`cartoon-card mb-6 slide-up`}
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <button
-                className="w-full text-left flex justify-between items-center"
-                onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
+          <Accordion type="single" collapsible className="space-y-6">
+            {faqs.map((faq, index) => (
+              <AccordionItem 
+                key={index} 
+                value={`item-${index}`}
+                className="cartoon-card bg-secondary border-4 border-black"
               >
-                <h3 className="text-2xl font-fredoka font-bold text-primary pr-4">
-                  {faq.question}
-                </h3>
-                <div className={`transform transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}>
-                  <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
-              </button>
-              
-              <div className={`overflow-hidden transition-all duration-500 ${openIndex === index ? 'max-h-96 mt-4' : 'max-h-0'}`}>
-                <p className="text-lg font-nunito text-muted-foreground leading-relaxed border-t-4 border-primary/20 pt-4">
-                  {faq.answer}
-                </p>
-              </div>
-            </div>
-          ))}
+                <AccordionTrigger className="text-left px-6 py-4 hover:no-underline">
+                  <h3 className="text-2xl font-fredoka font-bold text-primary pr-4">
+                    {faq.question}
+                  </h3>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-6">
+                  <p className="text-lg font-nunito text-muted-foreground leading-relaxed border-t-4 border-primary/20 pt-4">
+                    {faq.answer}
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
 
         {/* Social CTA */}

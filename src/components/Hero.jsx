@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import charactersImage from '../assets/characters.png';
-import degenzLogo from '../assets/degenz-logo.png';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -20,15 +19,6 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 py-20 flex flex-col items-center justify-center min-h-screen relative z-10">
-        {/* Logo */}
-        <div className={`mb-8 transform transition-all duration-1000 ${isVisible ? 'scale-100 opacity-100' : 'scale-0 opacity-0'}`}>
-          <img 
-            src={degenzLogo} 
-            alt="DEGENZ Logo" 
-            className="w-full max-w-md mx-auto drop-shadow-2xl"
-          />
-        </div>
-
         {/* Characters */}
         <div className={`mb-12 transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <img 
