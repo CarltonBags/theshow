@@ -83,14 +83,22 @@ const FAQ = () => {
               Got More Questions?
             </h3>
             <p className="text-lg font-nunito text-muted-foreground mb-6">
-              Hit us up on Twitter for behind-the-scenes content and updates!
+              Join our community on Twitter and Telegram for behind-the-scenes content and updates!
             </p>
-            <button 
-              className="cartoon-button bg-secondary text-black"
-              onClick={() => window.open('https://twitter.com/DegenzTheShow', '_blank')}
-            >
-              FOLLOW @DegenzTheShow
-            </button>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <button 
+                className="cartoon-button bg-secondary text-black"
+                onClick={() => window.open('https://twitter.com/DegenzTheShow', '_blank')}
+              >
+                FOLLOW @DegenzTheShow
+              </button>
+              <button 
+                className="cartoon-button bg-secondary text-black"
+                onClick={() => window.open('https://t.me/DegenzOfficial', '_blank')}
+              >
+                JOIN OUR TELEGRAM
+              </button>
+            </div>
           </div>
         </div>
       </div>
