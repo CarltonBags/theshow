@@ -27,7 +27,7 @@ const Episodes = () => {
       description: "Steve and Lenny decide to get some advice from a crypto veteran. Will his advice be helpful?",
       thumbnail: "https://img.youtube.com/vi/exOzTcHycPY/maxresdefault.jpg",
       youtubeId: "exOzTcHycPY",
-      duration: "TBD"
+      duration: "3:17"
     },
     {
       id: 4,
