@@ -25,9 +25,9 @@ const Episodes = () => {
       id: 3,
       title: "Episode 3 - Leroy",
       description: "Steve and Lenny decide to get some advice from a crypto veteran. Will his advice be helpful?",
-      thumbnail: titlecardImage,
-      youtubeId: "", // Placeholder
-      duration: "x:xx"
+      thumbnail: "https://img.youtube.com/vi/exOzTcHycPY/maxresdefault.jpg",
+      youtubeId: "exOzTcHycPY",
+      duration: "TBD"
     },
     {
       id: 4,
